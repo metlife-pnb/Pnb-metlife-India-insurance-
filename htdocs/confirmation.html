@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="w-full max-w-[320px] md:max-w-[480px] lg:max-w-[580px] mx-auto p-0 mt-4 sm:mt-6 lg:mt-10 px-3 sm:px-4 lg:px-0">
+        <!-- Main Container -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <!-- Logo Section -->
+            <div class="text-center py-2 sm:py-3 lg:py-4 px-3 sm:px-4">
+                <img src="https://th.bing.com/th/id/OIP.8IgIX1g-4-0p10lNhDGiaQAAAA?rs=1&pid=ImgDetMain" 
+                     alt="PNB MetLife" 
+                     class="w-full max-w-[120px] sm:max-w-[150px] lg:max-w-[200px] h-auto mx-auto">
+            </div>
+
+            <!-- Blue Bar -->
+            <div class="h-5 sm:h-6 lg:h-8 bg-[#3DA1E4] w-full"></div>
+
+            <!-- Confirmation Content -->
+            <div class="px-3 sm:px-6 lg:px-8 py-4">
+                <div class="text-center space-y-4">
+                    <div class="text-green-500 mx-auto w-16 h-16 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-800">Payment Successful!</h2>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <p class="text-lg font-medium text-gray-700">
+                            Amount Paid: 
+                            <span class="text-blue-600">
+                                ₹<span id="confirmedAmount" class="font-mono tracking-tighter">0.00</span>
+                            </span>
+                        </p>
+                        <p class="text-sm text-gray-600 mt-2">
+                            Transaction ID: 
+                            <span id="transactionId" class="font-mono">PNB-</span>
+                        </p>
+                    </div>
+                    <div class="text-sm text-gray-600">
+                        A confirmation has been sent to your registered mobile number.
+                    </div>
+                    <button onclick="window.location.href='index.html'" 
+                            class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors duration-200">
+                        Return to Home
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/confirmation.js"></script>
+</body>
+</html> 
